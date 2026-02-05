@@ -1,3 +1,5 @@
+package com.walmarttechmexico.challengecuponvalido;
+
 public class Main {
     public static void main(String[] args) {
         // Reto para el desarrollador:

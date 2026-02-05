@@ -1,14 +1,14 @@
 package com.walmarttechmexico.challengecuponvalido;
 
+// Reto para el desarrollador:
+// Completa la función 'validarCupon' para que determine si un cupón es válido.
+// Considera los siguientes criterios:
+// 1. El cupón no debe haber sido usado previamente.
+// 2. La fecha de expiración del cupón no debe haber pasado.
+// 3. Si la fecha de expiración no es válida, el cupón se considera inválido.
+
 public class Main {
     public static void main(String[] args) {
-        // Reto para el desarrollador:
-        // Completa la función 'validarCupon' para que determine si un cupón es válido.
-        // Considera los siguientes criterios:
-        // 1. El cupón no debe haber sido usado previamente.
-        // 2. La fecha de expiración del cupón no debe haber pasado.
-        // 3. Si la fecha de expiración no es válida, el cupón se considera inválido.
-
         // Datos del cupón (ejemplo) - ¡Puedes modificarlos para probar tu solución!
         String codigoCupon = "DESCUENTO20";
         String fechaExpiracion = "2025-07-15"; // Formato AAAA-MM-DD
@@ -25,12 +25,8 @@ public class Main {
         }
     }
 
-    // Función para validar el cupón (¡Completa este método!)
     public static boolean validarCupon(String codigo, String fechaExpiracion, boolean usado) {
-        // TODO: Implementa la lógica de validación del cupón aquí.
-        // Devuelve 'true' si el cupón es válido, 'false' en caso contrario.
-
-        // Esta es una implementación de ejemplo (¡reemplázala con tu solución!):
-        return false; // Por defecto, el cupón se considera inválido.
+        return new CouponValidator()
+                .validate(codigo, fechaExpiracion, usado);
     }
 }
